@@ -11,7 +11,7 @@
 
 ```hcl
 module "iam_account" {
-  source  = "terraform-aws-modules/iam/aws//modules/iam-account"
+  source  = "github.com/jasonfhill/terraform-aws-iam/modules/iam-account"
   version = "~> 3.0"
 
   account_alias = "awesome-company"
@@ -25,7 +25,7 @@ module "iam_account" {
 
 ```hcl
 module "iam_assumable_role" {
-  source  = "terraform-aws-modules/iam/aws//modules/iam-assumable-role"
+  source  = "github.com/jasonfhill/terraform-aws-iam/modules/iam-assumable-role"
   version = "~> 3.0"
 
   trusted_role_arns = [
@@ -50,7 +50,7 @@ module "iam_assumable_role" {
 
 ```hcl
 module "iam_assumable_role_with_oidc" {
-  source  = "terraform-aws-modules/iam/aws//modules/iam-assumable-role-with-oidc"
+  source  = "github.com/jasonfhill/terraform-aws-iam/modules/iam-assumable-role-with-oidc"
   version = "~> 3.0"
 
   create_role = true
@@ -74,7 +74,7 @@ module "iam_assumable_role_with_oidc" {
 
 ```hcl
 module "iam_assumable_role_with_saml" {
-  source  = "terraform-aws-modules/iam/aws//modules/iam-assumable-role-with-saml"
+  source  = "github.com/jasonfhill/terraform-aws-iam/modules/iam-assumable-role-with-saml"
   version = "~> 3.0"
 
   create_role = true
@@ -98,7 +98,7 @@ module "iam_assumable_role_with_saml" {
 
 ```hcl
 module "iam_assumable_roles" {
-  source  = "terraform-aws-modules/iam/aws//modules/iam-assumable-roles"
+  source  = "github.com/jasonfhill/terraform-aws-iam/modules/iam-assumable-roles"
   version = "~> 3.0"
 
   trusted_role_arns = [
@@ -120,7 +120,7 @@ module "iam_assumable_roles" {
 
 ```hcl
 module "iam_assumable_roles_with_saml" {
-  source  = "terraform-aws-modules/iam/aws//modules/iam-assumable-roles-with-saml"
+  source  = "github.com/jasonfhill/terraform-aws-iam/modules/iam-assumable-roles-with-saml"
   version = "~> 3.0"
 
   create_admin_role = true
@@ -138,7 +138,7 @@ module "iam_assumable_roles_with_saml" {
 
 ```hcl
 module "iam_user" {
-  source  = "terraform-aws-modules/iam/aws//modules/iam-user"
+  source  = "github.com/jasonfhill/terraform-aws-iam/modules/iam-user"
   version = "~> 3.0"
 
   name          = "vasya.pupkin"
@@ -154,7 +154,7 @@ module "iam_user" {
 
 ```hcl
 module "iam_policy" {
-  source  = "terraform-aws-modules/iam/aws//modules/iam-policy"
+  source  = "github.com/jasonfhill/terraform-aws-iam/modules/iam-policy"
   version = "~> 3.0"
 
   name        = "example"
@@ -182,7 +182,7 @@ EOF
 
 ```hcl
 module "iam_group_with_assumable_roles_policy" {
-  source  = "terraform-aws-modules/iam/aws//modules/iam-group-with-assumable-roles-policy"
+  source  = "github.com/jasonfhill/terraform-aws-iam/modules/iam-group-with-assumable-roles-policy"
   version = "~> 3.0"
 
   name = "production-readonly"
@@ -202,7 +202,7 @@ module "iam_group_with_assumable_roles_policy" {
 
 ```hcl
 module "iam_group_with_policies" {
-  source  = "terraform-aws-modules/iam/aws//modules/iam-group-with-policies"
+  source  = "github.com/jasonfhill/terraform-aws-iam/modules/iam-group-with-policies"
   version = "~> 3.0"
 
   name = "superadmins"
@@ -229,7 +229,7 @@ module "iam_group_with_policies" {
 
 ## IAM Best Practices
 
-AWS published [IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) and this Terraform module was created to help with some of points listed there:
+AWS published [IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
 
 ### 1. Create Individual IAM Users
 
